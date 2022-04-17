@@ -4,7 +4,7 @@ setup(
     name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='Final projects for Jedha bootcamp.  Full Stack Data Scientist',
+    description='Final projects for Jedha bootcamp: Bloc 1. Full Stack Data Scientist',
     author='Aura Moreno Vega',
     license='MIT',
 )
