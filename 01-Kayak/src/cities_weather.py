@@ -2,6 +2,16 @@ import requests
 import pandas as pd
 import json
 
+# Create dataframe of city names with and without french accents
+filename = 'data/raw/top_35_cities_france.txt'
+with open(filename) as file:
+    top_cities_ls = [line.rstrip() for line in file]
+
+filename = 'data/interim/top_35_cities_france_normalized_names.txt'
+with open(filename) as file:
+    top_cities_clean_ls = [line.rstrip() for line in file]
+
+cities_meta_df =  pd.DataFrame({'city': top_cities_ls, 'city_clean' : top_cities_clean_ls})
 
 # Retrieve latitude and longitude from nominatim API
 def req_gps_fn(x):
@@ -81,4 +91,3 @@ def explodeall_df_fn(days_ls, df_exploded):
     #Update name of columns: replace '.' by '_'
     weather_7Dexp_df.columns=[str.replace(".","_") for str in weather_7Dexp_df.columns.tolist()]
     return(weather_7Dexp_df)
-    
