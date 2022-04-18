@@ -57,10 +57,11 @@ def explode_df_fn(df, column):
     df_explode.drop(columns=[column], inplace=True)
 
     #Create new names of columns in order to be able to choose columns if needed
-    column_names=df_explode.columns[0:5].tolist()
+    column_names=df_explode.columns[0:4].tolist()
     column_names.append('Today')
-    names_7days=['Day_'+str(df_explode.columns[x]) for x in range(6,13)]
+    names_7days=['Day_'+str(df_explode.columns[x]) for x in range(5,12)]
     column_names=column_names+ names_7days
+    column_names
 
     #Update new column names
     df_explode.columns=column_names
