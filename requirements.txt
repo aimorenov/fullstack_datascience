@@ -21,6 +21,7 @@ cycler==0.11.0
 debugpy==1.5.1
 decorator==5.1.1
 defusedxml==0.7.1
+dexplot==0.1.4
 docopt==0.6.2
 entrypoints==0.4
 executing==0.8.2
@@ -41,6 +42,7 @@ itemloaders==1.0.4
 jedi==0.18.1
 Jinja2==3.0.3
 jmespath==0.10.0
+joblib==1.1.0
 jsonschema==4.4.0
 jupyter==1.0.0
 jupyter-client==7.1.2
@@ -101,6 +103,7 @@ queuelib==1.6.2
 regex==2022.3.2
 requests==2.27.1
 s3transfer==0.5.2
+scikit-learn==1.0.2
 scipy==1.8.0
 Scrapy==2.5.1
 seaborn==0.11.2
@@ -113,6 +116,7 @@ stack-data==0.1.4
 tenacity==8.0.1
 terminado==0.13.1
 testpath==0.5.0
+threadpoolctl==3.1.0
 tomli==2.0.1
 tornado==6.1
 traitlets==5.1.1
