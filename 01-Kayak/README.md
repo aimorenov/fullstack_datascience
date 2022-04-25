@@ -3,7 +3,7 @@ Construction and supply of a data management infrastructure
 ==============================  
 
 **Project:**  The marketing team would like to create a an application that will recommend people where to plan their next holidays. The application should use real data from:  
-* Weather in the next seven given days. 
+* Weather in the next seven given days 
 * Hotels in the area
 
 **Goals:**   
@@ -20,7 +20,7 @@ Construction and supply of a data management infrastructure
 
 * An SQL Database where we should be able to get the same cleaned data from S3
 
-* Two maps where you should have a Top-5 destinations and a Top-20 hotels in the area
+* Two maps where you should have a Top-5 destinations and a Top-10 hotels in the area
 
 Code
 ------------  
@@ -82,7 +82,9 @@ Project Organization
 --------
 ```
 
-Contact for jury member of certification
+Information for jury member of certification
 ------------  
-For any questions regarding  project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.
+For any questions regarding  project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
+
+Link to [video describing project](https://share.vidyard.com/watch/C1it9acSjAWhvR91Rbur6S?)
 
