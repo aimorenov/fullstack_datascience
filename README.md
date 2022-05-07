@@ -1,5 +1,5 @@
 # Jedha Fullstack Datascience Portfolio
-7 Data Science Projects  + 1 Final Fullstack Project Carried out at the Jedha Fullstack Data Science Bootcamp
+7 Data Science Projects  + 1 Final Fullstack Project Carried out at the Jedha Fullstack Data Science Bootcamp (RNCP validated certification: [RNCP35288](https://www.francecompetences.fr/recherche/rncp/35288/))
 
 # Goals 
 ✅ &nbsp; **Master Python** Programming <br>
