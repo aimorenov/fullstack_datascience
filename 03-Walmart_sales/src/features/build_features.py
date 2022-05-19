@@ -2,6 +2,14 @@ from cmath import nan
 import pandas as pd
 import numpy as np
 
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import SimpleImputer, IterativeImputer
+from sklearn.preprocessing import  StandardScaler, OneHotEncoder
+from feature_engine.imputation import RandomSampleImputer
+from sklearn.compose import ColumnTransformer
+
 
 # Function to create store categories based on weekly sales, CPI and unemployment
 def store_cat_fn(data, thresh_sales, thresh_CPI, thresh_unemp, outlier_samp):
@@ -97,3 +105,61 @@ usa_hols_df.drop(['date','date_str'], axis=1, inplace=True)
 
 # Convert year to string
 usa_hols_df['year'] = usa_hols_df['year'].map(year_dic)
+
+
+#### Pipelines for missing value imputations / scaling and one hot encoding
+
+# Basic numerical variables: Fuel_Price, Temperature, Unemployment
+# Based on distibution of data, use median for imputation
+basic_num_feats = [2, 3, 5, 7] 
+eng_num_feats = [1] 
+basic_num_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='median')),
+    ('scaler', StandardScaler())
+])
+
+# Categories: Store_str, quarter, holiday flag
+cat_feat = [0, 1, 4]
+cat_transformer = Pipeline(
+    steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')), 
+    ('encoder', OneHotEncoder(drop='first')) # first column will be dropped to avoid creating correlations between features
+    ])
+
+
+# CPI (binomial distribution)
+cpi_feat = [6]
+cpi_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('scaler', StandardScaler())
+])
+
+
+# Basic variables with more complex distribution: quarter, CPI (binomial distribution)
+# Multivariate imputation with Bayesian ridge: include already imputed temperature to aide imputation of other variables
+basic_multivar_feats = [1, 3, 5, 6]
+basic_multivar_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='median')),
+    ('scaler', StandardScaler())
+])
+
+
+
+
+
+
+# Engineered categorical variables: Temperature_group, Store_group_CPI, Store_group_unemp
+# Impute most frequent and one hot encode 
+eng_cat_feats = [2, 3, 4]
+eng_cat_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('encoder', OneHotEncoder(drop='first'))
+])
+
+
+# Random sample imputer on categorical quarter and weekofyear_holiday (since difficult to impute precisely) 
+eng_rand_feats = [0, 5] 
+eng_rand_transformer = Pipeline(steps=[
+    ('imputer', RandomSampleImputer(random_state=0)),
+    ('encoder', OneHotEncoder(drop='first'))
+])
