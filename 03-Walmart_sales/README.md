@@ -39,7 +39,9 @@ All code can be found in:
     - `02-data_processing.ipynb`: Missing value imputation, scaling, feature engineering, pre-processing pipelines  
     - `03-train_model.ipynb`: Split test vs train datasets, train baseline model
     - `04-model_selection.ipynb` : Fight overfitting via regularisation (establish best hyperparameters via gridsearch), compare to other regressors, cross validation 
-* Python scripts of functions associated to notebooks (inside src folder)
+* Python scripts of functions associated to notebooks (inside src folder). 
+
+**Requirements.txt** can be found in root of all projects aimorenov/fullstack_datascience
 
 <br>
     
