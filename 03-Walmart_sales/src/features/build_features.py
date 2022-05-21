@@ -2,13 +2,12 @@ from cmath import nan
 import pandas as pd
 import numpy as np
 
-from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import SimpleImputer, IterativeImputer
+from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import  StandardScaler, OneHotEncoder
 from feature_engine.imputation import RandomSampleImputer
 from sklearn.compose import ColumnTransformer
+from sklearn.linear_model import LinearRegression
 
 
 # Function to create store categories based on weekly sales, CPI and unemployment
@@ -163,3 +162,34 @@ eng_rand_transformer = Pipeline(steps=[
     ('imputer', RandomSampleImputer(random_state=0)),
     ('encoder', OneHotEncoder(drop='first'))
 ])
+
+
+
+# Create pre-processor objects
+
+basic_preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', basic_num_transformer, basic_num_feats),
+        ('cat', cat_transformer, cat_feat),
+        ('freqcat', cpi_transformer,cpi_feat )
+    ])
+
+
+eng_preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', basic_num_transformer, eng_num_feats),
+        ('cat', eng_cat_transformer, eng_cat_feats),
+        ('rand', eng_rand_transformer, eng_rand_feats),
+    ])
+
+
+# Define full pipeline with pre-processing and linear regressor
+basic_ref_pipeline = Pipeline([
+        ('preprocessing', basic_preprocessor),
+        ('lin_reg', LinearRegression())
+    ])
+
+eng_ref_pipeline = Pipeline([
+        ('preprocessing', eng_preprocessor),
+        ('lin_reg', LinearRegression())
+    ])
