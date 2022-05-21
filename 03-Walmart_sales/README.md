@@ -1,5 +1,5 @@
 **Bloc no 3: Walmart Sales**  
-Predictive analysis of strutctured data using artificial intelligence
+Predictive analysis of structured data using artificial intelligence
 ==============================  
 
 **Project:**  A dataset a dataset containing information about weekly sales achieved by different Walmart stores, and other variables such as the unemployment rate, fuel price or a measure of inflation (CPI).
@@ -92,4 +92,4 @@ Information for jury member of certification
 ------------ 
 For any questions regarding project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
 
-Link to [video describing project]() 
+Link to [video describing project](https://share.vidyard.com/watch/ZQ8LmkfdHBxppTpfdGvfgQ?) 
