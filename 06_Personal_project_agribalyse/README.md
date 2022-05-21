@@ -1,7 +1,25 @@
-agribalyse
-==============================
+**Bloc no 6: Agribalyse personal project**  
+Administration of data management projects
+==============================  
 
-Final project for jedha bootcamp.  Full Stack Data Scientist
+**Team members:** Malika Berrehail, Patricia Escalera, Aura Moreno Vega and Anatole Reffet 
+
+**Project:**  My environmental footprint: Using public data from the project [Agribalyse](https://doc.agribalyse.fr/documentation/), train a model to calculate the environmental footprint of a given list of ingredients (making up a dish)
+
+**Goals:**   
+
+* Extract, explore, feature engineer, pre-process and reduce the dimensions of agribalyse data   
+* Train different supervised regression models to best predict the environmental footprint of a list of user input ingredients   
+* Deploy trained model in heroku as a streamlit web application allowing user to input list of ingredients and retrieve score 
+
+
+**Deliverables:** 
+
+* Heroku url enabling use of application: [https://envfoodprint.herokuapp.com/](https://envfoodprint.herokuapp.com/)  
+
+* Trained model enabling prediction of environmental score: `models/score_predictor_v2.joblib` 
+
+* Requirements.txt enabling reproduction of analysis environment 
 
 Project Organization
 ------------
@@ -53,5 +71,17 @@ Project Organization
 
 
 --------
+
+<br>
+
+Information for jury member of certification
+------------  
+For any questions regarding  project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
+
+Link to [video describing project](). 
+
+Link to [presentation](https://docs.google.com/presentation/d/185ejQaOt2GTbjXWeCmsGH0QB1--7aQehxDAITkcTnH0/edit?usp=sharing)
+
+<br><br>
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
