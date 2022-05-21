@@ -35,5 +35,12 @@ _Tools : Python- Pandas, Numpy, Seaborn, Matplotlib, Plotly_
 **BLOC 3. Predictive analysis of strutctured data using artificial intelligence** <br>
 Build a machine learning model that can best predict weekly sales for Walmart stores using different kind of features   
 
-_Tools : EDA, Sklearn, linear regression, random forest regressor, regularized regression (Lasso/Ridge), cross validation_
+_Tools : EDA, Sklearn, linear regression, random forest regressor, regularized regression (Lasso/Ridge), cross validation_ 
+
+<br>
+
+**BLOC 6. Administration of data management projects** <br>
+Develop an application that predicts the environmental impact of a dish based on the list of ingredients given  
+
+_Tools : Whole fullstack datascience process including data extraction and preprocessing, model training and deployment of application (frontend and backend)_
 
