@@ -3,3 +3,4 @@ access_keys
 *.pyc 
 *credentials.py
 *MapBox_Token.txt
+env/
