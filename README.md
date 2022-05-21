@@ -28,5 +28,12 @@ _Tools: Scrapy, BeautifulSoup, Boto3, AWS S3, AWS RDS, SQL, SQLAlchemy_
 **BLOC 2. Exploratory Data Analysis (EDA)** <br>
 Explore a speed dating dataset to determine which are the factors that make a good date.  
 
-_Tools : Python- Pandas, Numpy, Seaborn, Matplotlib, Plotly_
+_Tools : Python- Pandas, Numpy, Seaborn, Matplotlib, Plotly_ 
+
+<br>
+
+**BLOC 3. Predictive analysis of strutctured data using artificial intelligence** <br>
+Build a machine learning model that can best predict weekly sales for Walmart stores using different kind of features   
+
+_Tools : EDA, Sklearn, linear regression, random forest regressor, regularized regression (Lasso/Ridge), cross validation_
 
