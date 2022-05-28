@@ -90,6 +90,6 @@ Information for jury member of certification
 ------------ 
 For any questions regarding project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
 
-Link to [video describing project]()     
+Link to [video describing project](https://share.vidyard.com/watch/266yKAbFW2TazvcoCjqMvu?)     
 
 
