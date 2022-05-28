@@ -343,7 +343,7 @@ st.subheader("Evaluate threshold of a minimum time delta between rentals: impact
 
 st.markdown("""
     ### Test threshold values for the minimum time delta to have between successive rentals so that the car in question can appear for rental on app:  
-     - Evaluathe how many previously problematic cases are solved under the new minimum delay feature  
+     - Evaluate how many previously problematic cases are solved under the new minimum delay feature  
      - Evaluate how many rentals that would've had place are negative impacted. i.e. they become problematic because the time between successive rentals is < minimum rental time  
 """)
 
