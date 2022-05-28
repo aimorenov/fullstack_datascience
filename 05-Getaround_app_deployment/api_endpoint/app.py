@@ -20,7 +20,7 @@ def predict():
             # Convert to dataframe
             df = pd.DataFrame(req["input"]).T
             # Load model
-            regressor = joblib.load("models/model.joblib")
+            regressor = joblib.load("models/reg_model.joblib")
             # Predict
             prediction = regressor.predict(df)
             # Return the result as JSON but first we need to transform the
@@ -30,7 +30,6 @@ def predict():
             #return response
             return jsonify({"The predicted rental price per day in euros is": prediction}), 200     
     return jsonify({"msg": "Error: not a JSON or no input key in your request"})
-
 
 
 

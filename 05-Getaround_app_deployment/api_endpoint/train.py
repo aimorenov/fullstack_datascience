@@ -9,16 +9,19 @@ from sklearn.linear_model import  Ridge
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
 
-DATASET_PATH = "data/get_around_pricing_project_cleaned.csv"
+DATASET_PATH = "data/get_around_pricing_project_clean.csv"
 MODELS_FOLDER = "models"
 
 # Load CSV file
 df = pd.read_csv(DATASET_PATH)
+
 # Get X and y
 y = df["rental_price_per_day"]
 X = df.drop(["rental_price_per_day"], axis=1)
+
 # Split dataset into train set and test set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 # Automatically detect positions of numeric/categorical features in explanatory variables dataframe
 idx = 0
 numeric_features = []
@@ -34,6 +37,7 @@ for i,t in X.dtypes.iteritems():
         categorical_indices.append(idx)
 
     idx = idx + 1
+
 # Pipeline for pre-processing categorical features and standardizing numerical features
 numeric_transformer = StandardScaler()
 categorical_transformer = OneHotEncoder(drop='first', handle_unknown='ignore')
