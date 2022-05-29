@@ -7,7 +7,7 @@
 ✅ &nbsp; Create **Data infrastructures** with **AWS**<br>
 ✅ &nbsp; Process **Big Data** with **Spark**<br>
 ✅ &nbsp; Build **Supervised** and **Unsupervised** **Machine Learning** models<br>
-✅ &nbsp; Build **Deep Learning** models with TensorFlow<br>
+✅ &nbsp; Build **Deep Learning** models with **TensorFlow**<br>
 ✅ &nbsp; Create data using Deep Learning<br>
 ✅ &nbsp; Deploy Machine Learning models using **Docker**, **MLFlow** etc<br>
 ✅ &nbsp; Create **web application** that can **host Machine Learning models**
@@ -33,7 +33,7 @@ _Tools : Python- Pandas, Numpy, Seaborn, Matplotlib, Plotly_
 <br>
 
 **BLOC 3. Predictive analysis of strutctured data using artificial intelligence** <br>
-Build a machine learning model that can best predict weekly sales for Walmart stores using different kind of features   
+Build a machine learning model that can best predict weekly sales for Walmart stores using different kinds of features   
 
 _Tools : EDA, Sklearn, linear regression, random forest regressor, regularized regression (Lasso/Ridge), cross validation_ 
 
