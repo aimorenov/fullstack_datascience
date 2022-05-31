@@ -8,6 +8,10 @@ import gensim # IMPORTANT: use gensim for importing stopwords as kernel crashed 
 import nltk
 nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
+import tensorflow as tf
+from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras.callbacks import EarlyStopping
 
 ## ------------  If wanting to use spacy for importing stop words:  NOT USABLE ON M1 CHIPS (usable on google colab)
 # pip install -U pip setuptools wheel
@@ -96,3 +100,24 @@ def preprocess_text(text):
     text = ' '.join(text_token_list)
     return text
 
+
+#############
+#############
+
+# Function that will clean text, encode, tokenize and eturn dataframe, ready for converison to tensorflow dataset
+
+def clean_tok_encode(df, num_words_tokenizer):
+    tweet_df = df.copy()
+
+    tweet_df["text_clean"] = tweet_df["text"].apply(preprocess_text)
+    ## Encode
+    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=num_words_tokenizer)
+    # Fit tokenizer
+    tokenizer.fit_on_texts(tweet_df['text_clean'])
+    # Transform text into sequences of indices
+    tweet_df["text_encoded"] = tokenizer.texts_to_sequences(tweet_df['text_clean'])
+    # Remove cases with 0 values 
+    tweet_df['len_text'] = tweet_df["text_encoded"].apply(lambda x: len(x))
+    tweet_df = tweet_df[tweet_df["len_text"]!=0]
+    print('Cleaning, encoding and tokenizing complete for {} samples'.format(tweet_df.shape[0]))
+    return tweet_df
