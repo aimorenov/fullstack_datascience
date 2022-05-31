@@ -39,6 +39,13 @@ _Tools : EDA, Sklearn, linear regression, random forest regressor, regularized r
 
 <br>
 
+**BLOC 4. Predictive analysis of unstrutctured data using artificial intelligence** <br>
+Build a deep learning model that predicts which tweets are about real disasters and which ones are not  
+
+_Tools : Tensorflow, Keras, Natural Language Processing, Tokenization, Encoding, Lemmatization_   
+
+<br>
+
 **BLOC 5. Industrialization of a machine learning algorithm and automation of decision-making processes** <br> 
 
 Build a machine learning model that can best predict the rental price per day for a car given a set of features and deploy the predictive model to an API endpoint for json requests  
