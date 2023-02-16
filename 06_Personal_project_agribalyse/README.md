@@ -74,14 +74,5 @@ Project Organization
 
 <br>
 
-Information for jury member of certification
-------------  
-For any questions regarding  project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
-
-Link to [video describing project](https://share.vidyard.com/watch/9y6dPRTPad6UG86PfN1ESZ?). 
-
-Link to [presentation](https://docs.google.com/presentation/d/185ejQaOt2GTbjXWeCmsGH0QB1--7aQehxDAITkcTnH0/edit?usp=sharing)
-
-<br><br>
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
