@@ -82,9 +82,4 @@ Project Organization
 --------
 ```
 
-Information for jury member of certification
-------------  
-For any questions regarding  project please contact me at aimorenov.jedhacertif[at]gmail[dot]com indicating name of project or bloc. I will be happy to answer.  
-
-Link to [video describing project](https://share.vidyard.com/watch/C1it9acSjAWhvR91Rbur6S?)
 
